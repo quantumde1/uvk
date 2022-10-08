@@ -1,8 +1,0 @@
-/./manifest.json
-//uvk.apparmor
-//assets/logo.svg
-//src/post_wall.py
-//src/wall_view.py
-//src/login.py
-//qml/Main.qml
-//uvk.desktop
