@@ -1,4 +1,4 @@
-from re import A
+
 import vk_api
 
 
