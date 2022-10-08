@@ -5,7 +5,6 @@ import Qt.labs.settings 1.0
 import io.thp.pyotherside 1.3
 
 MainView {
-    Login( id:obj2)
     id: root
     objectName: 'mainView'
     applicationName: 'uvk.quantumdev'
@@ -19,7 +18,7 @@ MainView {
 
         header: PageHeader {
         id: header
-        title: i18n.tr('UVk')
+        title: i18n.tr('UVKontakte')
         }
         //create Label
         Label {
@@ -37,10 +36,17 @@ MainView {
             
             onPressed: {
                 //connect and execute the speak function
-                obj2.add_textentry()
-                });
+                TextField {
+                    placeholderText: "Your number"
+                }
+                TextField {
+                    placeholderText: "Your password"
+                    echoMode: TextInput.Password
+                }
             }
-            }
+        });
+    }
+    }
         }
     }
 
@@ -50,8 +56,6 @@ MainView {
         //connect example.py
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('../src/'));
-            importModule_sync("wall_view")
-            importModule_sync("login")
         } 
         onError: {
             console.log('python error: ' + traceback);
