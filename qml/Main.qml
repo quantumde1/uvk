@@ -5,6 +5,7 @@ import Qt.labs.settings 1.0
 import io.thp.pyotherside 1.3
 
 MainView {
+    Login( id:obj2)
     id: root
     objectName: 'mainView'
     applicationName: 'uvk.quantumdev'
@@ -18,7 +19,7 @@ MainView {
 
         header: PageHeader {
         id: header
-        title: i18n.tr('UVK first prototype')
+        title: i18n.tr('UVk')
         }
         //create Label
         Label {
@@ -29,10 +30,6 @@ MainView {
                 right: parent.right
                 bottom: parent.bottom
             }
-            text: 'Click me'
-            verticalAlignment: Label.AlignVCenter
-            horizontalAlignment: Label.AlignHCenter
-            
             //create an area for handling mouse events
             MouseArea {
             anchors.fill: parent
@@ -40,8 +37,7 @@ MainView {
             
             onPressed: {
                 //connect and execute the speak function
-                python.call('wall_view.speak', ['UVK test'], function ( result ) {
-                label1.text=result;
+                obj2.add_textentry()
                 });
             }
             }
@@ -55,7 +51,7 @@ MainView {
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('../src/'));
             importModule_sync("wall_view")
-            importModule_sync("")
+            importModule_sync("login")
         } 
         onError: {
             console.log('python error: ' + traceback);
