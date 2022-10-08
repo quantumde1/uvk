@@ -4,7 +4,7 @@ VK Client for Ubuntu touch
 
 ## Building
 
-For build, downloads Clickable(https://clickable-ut.dev/en/latest/), and run `Clickable`
+For build, downloads Clickable(https://clickable-ut.dev/en/latest/), and in project directory  run `clickable`
 ## License
 
 Copyright (C) 2022  Arseniy Meserakov
