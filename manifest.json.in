@@ -1,0 +1,15 @@
+{
+    "name": "uvk.quantumdev",
+    "description": "VK Client for Ubuntu touch",
+    "architecture": "@CLICK_ARCH@",
+    "title": "uvk",
+    "hooks": {
+        "uvk": {
+            "apparmor": "uvk.apparmor",
+            "desktop":  "uvk.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "Arseniy Meserakov <stalinizm121@gmail.com>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}

@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+ca3a909b98b01cda9d9ade2122ef854d CMakeFiles/uvk.desktop
+60eb1424751542eb21cdcb1cc428cfd6 po/CMakeFiles/uvk.quantumdev.pot
