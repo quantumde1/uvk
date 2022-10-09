@@ -17,8 +17,8 @@ MainView {
         anchors.fill: parent
 
         header: PageHeader {
-        id: header
-        title: i18n.tr('UVKontakte')
+            id: header
+            title: i18n.tr('UVKontakte')
         }
         //create Label
         Label {
@@ -31,23 +31,30 @@ MainView {
             }
             //create an area for handling mouse events
             MouseArea {
-            anchors.fill: parent
-            hoverEnabled: true
-            
-            onPressed: {
+                anchors.fill: parent
+                hoverEnabled: true
+                onPressed: {
                 //connect and execute the speak function
-                TextField {
-                    placeholderText: "Your number"
-                }
-                TextField {
-                    placeholderText: "Your password"
-                    echoMode: TextInput.Password
+                    var a = Qt.createComponent("login.qml")
+                    if (a.status == Component.Ready) {
+                        var login = a.createObject(root, {"x": 0, "y": 50});
+                        if (login == null) {
+                            // Error Handling
+                            console.log("Error creating object");
+                        }
+                        label1.destroy()
+                    } else if (a.status == Component.Error) {
+                        // Error Handling
+                        console.log("Error loading component:", a.errorString());
+                    }
                 }
             }
-        });
-    }
-    }
         }
+        // TextField {
+        //     x: 0
+        //     y: 50
+        //     placeholderText: "Enter your phone number"
+        // }
     }
 
 //declare a variable to import a Python module
