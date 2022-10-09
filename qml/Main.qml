@@ -29,12 +29,14 @@ MainView {
                 right: parent.right
                 bottom: parent.bottom
             }
+            text: 'Click at any place for login'
             //create an area for handling mouse events
             MouseArea {
                 anchors.fill: parent
                 hoverEnabled: true
                 onPressed: {
                 //connect and execute the speak function
+
                     var a = Qt.createComponent("login.qml")
                     if (a.status == Component.Ready) {
                         var login = a.createObject(root, {"x": 0, "y": 50});
