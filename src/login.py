@@ -14,13 +14,6 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-import vk_api
-
 def login(number, passwd):
-  vk_session = vk_api.VkApi('+7123456789', 'password')
-  try:
-        vk_session.auth(token_only=True)
-  except vk_api.AuthError as error_msg:
-        return error_msg
-
-  vk = vk_session.get_api()
+      #TODO: Create vk api lib and make login functional
+      return None
