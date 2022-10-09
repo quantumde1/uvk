@@ -3,13 +3,15 @@ import Ubuntu.Components 1.3
 
 Rectangle {
     TextField {
-        x: 75
-        y: 15
+        id: phoneInput
+        x: units.dp(75)
+        y: units.dp(15)
         placeholderText: i18n.tr("Enter your phone number")
     }
     TextField {
-        x: 75
-        y: 55
+        id: passwordInput
+        x: units.dp(75)
+        y: units.dp(55)
         placeholderText: i18n.tr("Enter your password")
         echoMode: TextInput.Password
     }
