@@ -20,6 +20,7 @@ MainView {
             title: i18n.tr('UVKontakte')
         }
         //create Label
+        
         Label {
             id: label1
             anchors {

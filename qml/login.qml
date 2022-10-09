@@ -1,29 +1,29 @@
 import QtQuick 2.7
 import Ubuntu.Components 1.3
+import QtQuick.Layouts 1.11
 
 import io.thp.pyotherside 1.3
 
-Rectangle {
+GridLayout {
     id: login_page
-    y: units.dp(45)
-    x: 0
+    anchors.fill: parent
+    columns: 1
+    //y: units.dp(45)
+    //x: 0
     TextField {
         id: phoneInput
-        x: units.dp(75)
-        y: units.dp(15)
+        anchors.horizontalCenter: parent.horizontalCenter
         placeholderText: i18n.tr("Enter your phone number")
     }
     TextField {
         id: passwordInput
-        x: units.dp(75)
-        y: units.dp(55)
+        anchors.horizontalCenter: parent.horizontalCenter
         placeholderText: i18n.tr("Enter your password")
         echoMode: TextInput.Password
     }
 
     Button {
-        x: units.dp(120)
-        y: units.dp(95)
+        anchors.horizontalCenter: parent.horizontalCenter
         text: "Login"
         onClicked: python.call("login.login", [phoneInput.text, passwordInput.text], ret=>{
             
