@@ -39,7 +39,7 @@ MainView {
 
                     var a = Qt.createComponent("login.qml")
                     if (a.status == Component.Ready) {
-                        var login = a.createObject(main, {"x": 0, "y": 50});
+                        var login = a.createObject(main);
                         if (login == null) {
                             // Error Handling
                             console.log("Error creating object");

@@ -2,6 +2,8 @@ import QtQuick 2.7
 import Ubuntu.Components 1.3
 
 Rectangle {
+    y: units.dp(45)
+    x: 0
     TextField {
         id: phoneInput
         x: units.dp(75)

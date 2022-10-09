@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uvk.quantumdev\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-09 13:42+0000\n"
+"POT-Creation-Date: 2022-10-09 13:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "UVKontakte"
 msgstr ""
 
-#: ../qml/login.qml:9
+#: ../qml/login.qml:11
 msgid "Enter your phone number"
 msgstr ""
 
-#: ../qml/login.qml:15
+#: ../qml/login.qml:17
 msgid "Enter your password"
 msgstr ""
 
