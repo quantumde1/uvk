@@ -10,6 +10,9 @@ GridLayout {
     columns: 1
     //y: units.dp(45)
     //x: 0
+    Item {
+        Layout.fillHeight: true
+    }
     TextField {
         id: phoneInput
         anchors.horizontalCenter: parent.horizontalCenter
@@ -28,6 +31,9 @@ GridLayout {
         onClicked: python.call("login.login", [phoneInput.text, passwordInput.text], ret=>{
             
         })
+    }
+    Item {
+        Layout.fillHeight: true
     }
 
     Python {
