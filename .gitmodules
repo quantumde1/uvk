@@ -1,0 +1,3 @@
+[submodule "src/vk-api-wrapper"]
+	path = src/vk-api-wrapper
+	url = git@github.com:uvk-devs/vk-api-wrapper
