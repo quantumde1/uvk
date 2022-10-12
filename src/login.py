@@ -14,6 +14,10 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
+from vklib import VK
+
 def login(number, passwd):
-      #TODO: Create vk api lib and make login functional
-      return None
+    # i found this in https://github.com/Computershik73/ViKaTouch/blob/master/src/vikatouch/VikaTouch.java
+    vk = VK("6146827", "qVxWRF1CwHERuIrKBnqe")
+    vk.auth(number, passwd)
+    return vk

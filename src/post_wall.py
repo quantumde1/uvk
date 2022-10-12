@@ -1,6 +1,4 @@
-import vk_api
-import login
+from vklib import VK
 
-
-def post_wall_message(text):
-  print(vk.wall.post(message=text))
+def test(client:VK):
+  client.api.wall.post(client.id, "Hello, world!")

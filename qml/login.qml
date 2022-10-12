@@ -29,7 +29,7 @@ GridLayout {
         anchors.horizontalCenter: parent.horizontalCenter
         text: "Login"
         onClicked: python.call("login.login", [phoneInput.text, passwordInput.text], ret=>{
-            
+            python.call("post_wall.test", [ret,], ()=>{})
         })
     }
     Item {
