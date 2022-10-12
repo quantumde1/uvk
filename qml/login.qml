@@ -41,7 +41,8 @@ GridLayout {
         //connect example.py
         Component.onCompleted: {
             addImportPath(Qt.resolvedUrl('../src/'));
-            importModule_sync("login")  
+            importModule_sync("login") 
+            importModule_sync("post_wall") 
         } 
         onError: {
             console.log('python error: ' + traceback);
