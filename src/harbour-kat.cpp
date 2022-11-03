@@ -35,10 +35,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "filesaver.h"
-#include "mediaplayerwrapper.h"
-#include "settingswrapper.h"
-#include "vksdk/src/vksdk.h"
+#include "./filesaver.h"
+#include "./mediaplayerwrapper.h"
+#include "./settingswrapper.h"
+#include "../plugins/Example/vksdk.h"
 
 /*void myMessageOutputt(QtMsgType type, const char *msg)
  {
