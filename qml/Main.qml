@@ -20,7 +20,9 @@
 */
 
 import QtQuick 2.0
-import QtQuickControls 2.0
+import Sailfish.Silica 1.0
+import org.nemomobile.notifications 1.0
+import org.nemomobile.mpris 1.0
 import QtMultimedia 5.0
 
 
@@ -59,6 +61,19 @@ ApplicationWindow
             return Qt.createComponent(Qt.resolvedUrl("pages/LoginPage.qml"))
         }
     }
+
+    Notification {
+        id: commonNotification
+        category: "harbour-kat"
+        remoteActions: [
+            { "name":    "default",
+              "service": "nothing",
+              "path":    "nothing",
+              "iface":   "nothing",
+              "method":  "nothing" }
+        ]
+    }
+
     MprisPlayer {
             id: mprisPlayer
             property string artist
@@ -135,6 +150,26 @@ ApplicationWindow
         }
 
 
+
+    Connections {
+        target: vksdk
+        onGotNewMessage: {
+            commonNotification.summary = name
+            commonNotification.previewSummary = name
+            commonNotification.body = preview
+            commonNotification.previewBody = preview
+            commonNotification.close()
+            commonNotification.publish()
+        }
+    }
+
+    Connections {
+        target: vksdk.longPoll
+        onUnreadDialogsCounterUpdated: {
+            console.log("onUnreadDialogsCounterUpdated", value)
+            messagesCounter.text = value
+        }
+    }
 
     Connections {
         target: player
