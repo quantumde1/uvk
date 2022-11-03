@@ -21,7 +21,7 @@
 
 import QtQuick 2.0
 import QtQuickControls 2.0
-import Sailfish.Pickers 1.0
+
 
 import "../views"
 
@@ -190,7 +190,6 @@ Page {
                         }
 
                         onClicked: if (!attachmentsBusy.running) {
-                                       var imagePicker = pageStack.push("Sailfish.Pickers.ImagePickerPage")
                                        imagePicker.selectedContentChanged.connect(function () {
                                            attachmentsBusy.running = true
                                            vksdk.attachPhotoToMessage(imagePicker.selectedContent)

@@ -21,7 +21,6 @@
 
 import QtQuick 2.0
 import QtQuickControls 2.0
-import org.nemomobile.notifications 1.0
 
 Page {
     id: loginPage
