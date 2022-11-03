@@ -3,6 +3,12 @@
             return Qt.createComponent(Qt.resolvedUrl("pages/LoginPage.qml"))
     }
 */
+import QtMultimedia 5.0
+import QtQuickControls 2.0
+import QtQuick 2.7
+import Ubuntu.Components 1.3
+import QtQuick.Layouts 1.3
+import Qt.labs.settings 1.0
 MainView {
     id: root
     objectName: 'mainView'
