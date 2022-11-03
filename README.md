@@ -7,7 +7,7 @@ VK Client for Ubuntu touch
 For build, downloads Clickable(https://clickable-ut.dev/en/latest/), and in project directory  run `clickable`
 ## License
 
-Copyright (C) 2022  Arseniy Meserakov
+Copyright (C) 2022  Arseniy Meserakov/Ilya Vysotsky(github.com/Computershik73)
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3, as published
 by the Free Software Foundation.
