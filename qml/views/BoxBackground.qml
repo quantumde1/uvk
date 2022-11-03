@@ -20,7 +20,7 @@
   along with Kat.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-import QtQuick 2.0
+ 
 import QtQuickControls 2.0
 
 Rectangle {
