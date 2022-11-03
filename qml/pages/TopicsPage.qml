@@ -5,7 +5,7 @@ Page {
 
     property int ownerId
 
-    SilicaListView {
+    ListView {
         id: topicsList
         anchors.fill: parent
 

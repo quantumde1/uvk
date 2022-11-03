@@ -37,7 +37,7 @@ Page {
 
         open: false
 
-        background: SilicaListView {
+        background: ListView {
             anchors.fill: parent
 
             model: ListModel {

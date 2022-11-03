@@ -13,7 +13,7 @@ Page {
     }
 
 
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
         contentHeight: content.height
 

@@ -30,7 +30,7 @@ Page {
     property var name
     property var wallpost
 
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
         contentHeight: header.height + content.height
 

@@ -30,7 +30,7 @@ Page {
     property var userId
     property var type // 1 - all; 2 - online; 3 - mutual
 
-    SilicaListView {
+    ListView {
         id: friendsListView
         anchors.fill: parent
 

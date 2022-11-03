@@ -34,7 +34,7 @@ Page {
        running: false
     }
 
-    SilicaListView {
+    ListView {
 
         PullDownMenu {
 

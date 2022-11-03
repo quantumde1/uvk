@@ -34,10 +34,10 @@ Page {
 
     property string attachmentsList: ""
 
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
 
-        SilicaListView {
+        ListView {
             id: messagesListView
             anchors.left: parent.left
             anchors.right: parent.right

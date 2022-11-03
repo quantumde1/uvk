@@ -8,7 +8,7 @@ Page {
     property bool isClosed
     property string _title
 
-    SilicaListView {
+    ListView {
         id: topicMessagesList
         anchors.fill: parent
         anchors.bottomMargin: newCommentField.height

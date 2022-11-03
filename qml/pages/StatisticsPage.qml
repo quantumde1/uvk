@@ -51,7 +51,7 @@ Page {
         context.stroke()
     }
 
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
         contentHeight: content.height
 

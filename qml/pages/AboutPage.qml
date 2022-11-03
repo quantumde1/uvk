@@ -26,7 +26,7 @@ import QtQuickControls 2.0
 Page {
     id: aboutPage
 
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
         anchors.bottomMargin: Theme.paddingLarge
         contentHeight: header.height + content.height

@@ -36,7 +36,7 @@ Page {
         enabled: false
     }
 
-    SilicaFlickable {
+    Flickable {
         id: userDataView
         anchors.fill: parent
         contentHeight: content.height + header.height

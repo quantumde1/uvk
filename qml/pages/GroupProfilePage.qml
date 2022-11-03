@@ -30,7 +30,7 @@ Page {
     property var groupId
     property var group
 
-    SilicaFlickable {
+    Flickable {
         anchors.fill: parent
         contentHeight: content.height + header.height
 

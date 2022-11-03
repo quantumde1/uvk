@@ -22,17 +22,18 @@
 #ifdef QT_QML_DEBUG
 #include <QtQuick>
 #endif
-
 #include <QGuiApplication>
+#include <QCoreApplication>
+#include <QUrl>
+#include <QString>
+#include <QQuickView>
 #include <QStandardPaths>
 #include <QQmlContext>
-#include <QQuickView>
 #include <QScopedPointer>
 #include <QtGlobal>
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <sailfishapp.h>
 
 #include "filesaver.h"
 #include "mediaplayerwrapper.h"
@@ -77,21 +78,13 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
         fprintf(stderr, "Fatal: %s (%s:%u, %s)\n", localMsg.constData(), context.file, context.line, context.function);
         abort();
     }*/
-
-    QFile fileOut("/home/nemo/log.txt");
-        if(fileOut.open(QIODevice::Append | QIODevice::Text))
-        {
-            fileOut.write(localMsg);
-            fileOut.flush();
-            fileOut.close();
-    }
 }
 
 
 int main(int argc, char *argv[]) {
     QScopedPointer<QGuiApplication> application(SailfishApp::application(argc, argv));
-    application->setOrganizationName(QStringLiteral("org.ilyavysotsky"));
-    application->setApplicationName(QStringLiteral("kat"));
+    application->setOrganizationName(QStringLiteral("org.quantumde"));
+    application->setApplicationName(QStringLiteral("kat-ut"));
         qInstallMessageHandler(myMessageOutput);
     QScopedPointer<QQuickView> view(SailfishApp::createView());
 
@@ -107,9 +100,8 @@ int main(int argc, char *argv[]) {
     QScopedPointer<VkSDK> vksdk(new VkSDK(view.data()));
     view->rootContext()->setContextProperty("vksdk", vksdk.data());
 
-    view->setSource(SailfishApp::pathTo("qml/harbour-kat.qml"));
+    view->setSource(QUrl("qrc:/harbour-cat.qml"));
     view->show();
 
     return application->exec();
 }
-

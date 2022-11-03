@@ -88,7 +88,7 @@ Page {
         running: false
     }
 
-    SilicaListView {
+    ListView {
         id: menuList
         anchors.fill: parent
         model: ListModel {}

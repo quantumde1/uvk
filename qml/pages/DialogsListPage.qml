@@ -27,7 +27,7 @@ import "../views"
 Page {
     id: dialogsListPage
 
-    SilicaListView {
+    ListView {
         id: dialogsList
         anchors.fill: parent
         clip: true

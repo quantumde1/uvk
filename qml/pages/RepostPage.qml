@@ -13,7 +13,7 @@ Dialog {
         cancelText: qsTr("Cancel")
     }
 
-    SilicaFlickable {
+    Flickable {
         id: flick
         anchors.fill: parent
         anchors.topMargin: header.height

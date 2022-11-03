@@ -29,7 +29,7 @@ Page {
 
     property var userId
 
-    SilicaListView {
+    ListView {
         id: groupsListView
         anchors.fill: parent
 

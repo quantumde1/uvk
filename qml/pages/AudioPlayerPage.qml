@@ -25,7 +25,7 @@ import Sailfish.Media 1.0
 
 Page {
 
-    SilicaListView {
+    ListView {
         id: playlist
         anchors.fill: parent
         anchors.bottomMargin: Qt.inputMethod.visible ? 0 : audioPlayer.height
