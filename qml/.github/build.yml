@@ -1,0 +1,48 @@
+name: clickable github actions build
+
+on:
+  push:
+
+  pull_request:
+    
+  workflow_dispatch:
+    
+jobs:
+
+  build-armhf:
+    name: Build .click package for armhf
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: build package
+      uses: addnab/docker-run-action@v3
+      with:
+        image: clickable/ci-16.04-armhf
+        options: -v ${{ github.workspace }}:/tmp/clickable_base
+        run: |
+          cd /tmp/clickable_base; \
+          clickable build
+    - name: Upload .click package for armhf
+      uses: actions/upload-artifact@v3.1.1
+      with:
+        path: |
+          build/*/app/*.click
+  
+  build-arm64:
+    name: Build .click package for arm64
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: build package
+      uses: addnab/docker-run-action@v3
+      with:
+        image: clickable/ci-16.04-arm64
+        options: -v ${{ github.workspace }}:/tmp/clickable_base
+        run: |
+         cd /tmp/clickable_base; \
+          clickable build
+    - name: Upload .click package for arm64
+      uses: actions/upload-artifact@v3.1.1
+      with:
+        path: |
+          build/*/app/*.click
