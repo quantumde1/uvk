@@ -56,7 +56,7 @@ Page {
         }
     }
 
-    SilicaGridView {
+    GridView {
         anchors.fill: parent
         anchors.topMargin: albumChooser.height
         clip: true

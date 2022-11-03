@@ -82,12 +82,11 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
 
 
 int main(int argc, char *argv[]) {
-    QScopedPointer<QGuiApplication> application(SailfishApp::application(argc, argv));
+    QGuiApplication *application = new QGuiApplication(argc, (char**)argv);
     application->setOrganizationName(QStringLiteral("org.quantumde"));
     application->setApplicationName(QStringLiteral("kat-ut"));
-        qInstallMessageHandler(myMessageOutput);
-    QScopedPointer<QQuickView> view(SailfishApp::createView());
-
+    qInstallMessageHandler(myMessageOutput);
+    QQuickView *view = new QQuickView();
     QScopedPointer<FileSaver> fileSaver(new FileSaver(view.data()));
     view->rootContext()->setContextProperty("fileSaver", fileSaver.data());
 
