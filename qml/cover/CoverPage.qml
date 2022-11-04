@@ -20,7 +20,7 @@
 */
 
  
- import QtQuickControls 2.7
+ import QtQuickControls 2.0
 
 CoverBackground {
     id: cover

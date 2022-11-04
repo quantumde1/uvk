@@ -20,7 +20,7 @@
 */
 
  
- import QtQuickControls 2.7
+ import QtQuickControls 2.0
 
 Column {
     height: childrenRect.height

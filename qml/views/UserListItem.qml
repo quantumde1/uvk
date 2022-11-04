@@ -20,7 +20,7 @@
 */
 
  
- import QtQuickControls 2.7
+ import QtQuickControls 2.0
 
 BackgroundItem {
     id: userListItem
