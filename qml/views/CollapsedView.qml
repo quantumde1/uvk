@@ -21,7 +21,7 @@
 */
 
  
-import QtQuickControls 2.0
+ import QtQuickControls 2.7
 
 BackgroundItem {
     id: detailsBackground
